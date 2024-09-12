@@ -1,58 +1,44 @@
 interface Movie {
   imdbID: string;
   Title: string;
-  Year: number;
+  Year: string;
   Poster: string;
 }
 
 interface WatchedMovie extends Movie {
-  runtime: number;
-  imdbRating: number;
-  userRating: number;
+  runtime: string;
+  imdbRating: string;
+  userRating: string;
 }
-export type { Movie, WatchedMovie };
-// const tempMovieData: TempMovieData[] = [
-//   {
-//     imdbID: "tt1375666",
-//     Title: "Inception",
-//     Year: 2010,
-//     Poster:
-//       "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
-//   },
-//   {
-//     imdbID: "tt0133093",
-//     Title: "The Matrix",
-//     Year: 1999,
-//     Poster:
-//       "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg",
-//   },
-//   {
-//     imdbID: "tt6751668",
-//     Title: "Parasite",
-//     Year: 2019,
-//     Poster:
-//       "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg",
-//   },
-// ];
-// const tempWatchedData: TempWatchedData[] = [
-//   {
-//     imdbID: "tt1375666",
-//     Title: "Inception",
-//     Year: 2010,
-//     Poster:
-//       "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
-//     runtime: 148,
-//     imdbRating: 8.8,
-//     userRating: 10,
-//   },
-//   {
-//     imdbID: "tt0088763",
-//     Title: "Back to the Future",
-//     Year: 1985,
-//     Poster:
-//       "https://m.media-amazon.com/images/M/MV5BZmU0M2Y1OGUtZjIxNi00ZjBkLTg1MjgtOWIyNThiZWIwYjRiXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-//     runtime: 116,
-//     imdbRating: 8.5,
-//     userRating: 9,
-//   },
-// ];
+
+interface SelectedMovie {
+  Title: string;
+  Year: string;
+  Rated: string;
+  Released: string;
+  Runtime: string;
+  Genre: string;
+  Director: string;
+  Writer: string;
+  Actors: string; // need to split it fromm commas into array
+  Plot: string;
+  language: string; // need to split it fromm commas into array
+  Country: string;
+  Awards: string;
+  Poster: string;
+  Ratings: { Source: string; Value: string }[];
+  Metascore: string;
+  imdbRating: string;
+  imdbVotes: string;
+  imdbID: string;
+  Type: string;
+  DVD: string;
+  BoxOffice: string;
+  Production: string;
+  Website: string;
+  Response: string;
+}
+
+export const KEY = "f9a2e728";
+
+export type { Movie, WatchedMovie, SelectedMovie };
