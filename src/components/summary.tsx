@@ -14,19 +14,21 @@ export default function Summary({ watchedMovies }: { watchedMovies: WatchedMovie
       <div>
         <p>
           <span>#️⃣</span>
-          <span>{watchedMovies.length} movies</span>
+          <span>
+            {watchedMovies.length} {watchedMovies.length > 0 ? "movies" : "movie"}
+          </span>
         </p>
         <p>
           <span>⭐️</span>
-          <span>{avgImdbRating.toFixed(2)}</span>
+          <span>{avgImdbRating > 0 ? avgImdbRating.toFixed(2) : avgImdbRating.toFixed(0)}</span>
         </p>
         <p>
           <span>🌟</span>
-          <span>{avgUserRating.toFixed(2)}</span>
+          <span>{avgUserRating > 0 ? avgUserRating.toFixed(2) : avgUserRating.toFixed(0)}</span>
         </p>
         <p>
           <span>⏳</span>
-          <span>{avgRuntime.toFixed(2)} min</span>
+          <span>{avgRuntime > 0 ? avgRuntime.toFixed(2) : avgRuntime.toFixed(0)} min</span>
         </p>
       </div>
     </div>
